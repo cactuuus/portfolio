@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+/******************************************************************************
+    THEME PROPERTIES
+******************************************************************************/
+
+body[data-theme="light"] {
+  --bg-primary: rgb(255, 202, 202);
+  --bg-secondary: black;
+
+  --font-color: black;
+  --highlight: yellow;
+  --selected: rgb(255, 107, 70);
+
+  --box: rgb(255, 219, 225);
+
+  --shadow: rgb(255, 123, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body[data-theme="dark"] {
+  --bg-primary: #040446;
+  --bg-secondary: rgb(204, 18, 105);
+
+  --font-color: white;
+  --highlight: rgb(231, 48, 94);
+  --selected: rgb(100, 12, 34);
+
+  --box: rgb(28, 94, 57);
+
+  --shadow: rgb(90, 15, 60);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/******************************************************************************
+    GLOBAL
+******************************************************************************/
+
+body {
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(var(--bg-secondary) 0.5px, transparent 0),
+    radial-gradient(var(--bg-secondary) 0.5px, transparent 0);
+  background-size: 9px 9px;
+  background-position: 0 0, 4.5px 4.5px;
+
+  * {
+    font-family: "Cascadia Code", sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+:root {
+  --mobile-width: 700px;
+}
+
+#root {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (min-width: 750px) {
+  #root {
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 975px) {
+  #root {
+    max-width: 950px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #root {
+    max-width: 1200px;
+  }
+}
+
+.highlight {
+  background-color: var(--highlight);
+}
+
+.link:hover,
+.link:hover > .icon * {
+  color: var(--selected);
+}
+
+.active {
+  color: var(--selected);
+  text-shadow: 1px -1px 0 var(--font-color);
+}
+
+/******************************************************************************
+    HEADER
+******************************************************************************/
+
+#title {
+  font-size: 2.5rem;
+}
+
+ul#social-links > li {
+  display: inline;
+  margin-left: 0.5rem;
+
+  .icon {
+    height: 2rem;
+    vertical-align: bottom;
+  }
+}
+
+header {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.3rem 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 750px) {
+  header {
+    margin: 2rem 0 4rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  nav {
+    flex-grow: 0.6;
+    max-width: 400px;
   }
 }
