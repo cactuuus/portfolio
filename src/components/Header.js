@@ -20,8 +20,8 @@ const Header = ({ pages }) => {
   return (
     <header className="highlight">
       <Link to={"/"}>
-        <h1 id="title" className="link">
-          JACOPO CALVI
+        <h1 id="banner" className="link">
+          Jacopo Calvi
         </h1>
       </Link>
 
