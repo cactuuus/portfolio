@@ -25,7 +25,7 @@
     --highlight: rgb(156, 35, 55);
 
     --box-color: rgb(47, 81, 83);
-    --button-pressed: rgb(39, 68, 70);
+    --button-pressed: rgb(47, 81, 83);
 
     --detail-color: rgba(207, 82, 57, 0.75);
   }
@@ -58,18 +58,18 @@ body {
   background-size: 9px 9px;
   background-position: 0 0, 4.5px 4.5px;
   width: 96%;
-  margin: auto;
+  margin: auto !important;
+}
 
-  * {
-    box-sizing: border-box;
-    font-family: "Cascadia Code", sans-serif;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 1rem;
-    color: var(--font-color);
-    margin: 0;
-    padding: 0;
-  }
+* {
+  box-sizing: border-box;
+  font-family: "Cascadia Code", sans-serif;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 800px) {
