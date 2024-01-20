@@ -1,32 +1,43 @@
 /******************************************************************************
     THEME PROPERTIES
 ******************************************************************************/
+@media (prefers-color-scheme: light) {
+  body {
+    --bg-primary: rgb(255, 202, 202);
+    --bg-secondary: black;
 
-body[data-theme="light"] {
-  --bg-primary: rgb(255, 202, 202);
-  --bg-secondary: black;
+    --font-color: black;
+    --highlight: yellow;
 
-  --font-color: black;
-  --highlight: yellow;
+    --box-color: rgb(255, 219, 225);
+    --button-pressed: rgb(255, 157, 173);
 
-  --box-color: rgb(255, 219, 225);
-
-  --detail-color: rgb(255, 123, 0);
+    --detail-color: rgba(255, 123, 0, 0.75);
+  }
 }
 
-body[data-theme="dark"] {
-  --bg-primary: #040446;
-  --bg-secondary: rgb(204, 18, 105);
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-primary: rgb(46, 35, 39);
+    --bg-secondary: rgb(156, 35, 55);
 
-  --font-color: white;
-  --highlight: rgb(231, 48, 94);
+    --font-color: rgb(245, 224, 155);
+    --highlight: rgb(156, 35, 55);
 
-  --box-color: rgb(28, 94, 57);
+    --box-color: rgb(47, 81, 83);
+    --button-pressed: rgb(39, 68, 70);
 
-  --detail-color: rgb(90, 15, 60);
+    --detail-color: rgba(207, 82, 57, 0.75);
+  }
 }
 
 body {
+  /* screen sizes reference */
+  --extra-small-screen: 550px;
+  --small-screen: 800px;
+  --medium-screen: 1000px;
+  --large-screen: 1200px;
+
   --shadow: clamp(5px, 1vw, 10px) clamp(5px, 1vw, 10px) 0 var(--detail-color);
   --border: 1px solid black;
 
@@ -63,19 +74,19 @@ body {
 
 @media screen and (min-width: 800px) {
   body {
-    max-width: 800px;
+    max-width: var(--small-screen);
   }
 }
 
 @media screen and (min-width: 1000px) {
   body {
-    max-width: 1000px;
+    max-width: var(--medium-screen);
   }
 }
 
 @media screen and (min-width: 1200px) {
   body {
-    max-width: 1200px;
+    max-width: var(--large-screen);
   }
 }
 
@@ -87,6 +98,16 @@ img {
   border: var(--border);
   box-shadow: var(--shadow);
   vertical-align: bottom;
+}
+
+button {
+  text-align: left;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background-color: var(--button-pressed);
+  }
 }
 
 .p-info .link,
@@ -139,7 +160,7 @@ b {
 
 #banner {
   font-size: 2.5rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
@@ -243,15 +264,35 @@ header {
 @media screen and (min-width: 800px) {
   .project {
     display: grid;
+    gap: var(--small-gap);
+    grid-template-rows: 4rem 1fr;
     grid-template-columns: 1fr 0.8fr;
-    column-gap: var(--small-gap);
 
     .p-image {
-      margin: var(--small-gap) 0 0;
+      margin: 0;
     }
 
     .p-info {
-      height: 100%;
+      grid-row: 1 / span 2;
+      grid-column: 2;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .project {
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+    grid-template-columns: 1fr 0.8fr;
+    gap: var(--small-gap);
+
+    .title-box {
+      grid-column: 1 / span 2;
+    }
+
+    .p-info {
+      grid-row: 2;
+      grid-column: 2;
     }
   }
 }

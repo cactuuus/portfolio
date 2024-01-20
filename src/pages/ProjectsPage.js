@@ -36,7 +36,7 @@ const ricksRanch = {
 };
 
 const origami = {
-  name: "Origami (uni)",
+  name: "Origami",
   type: "web",
   picture: "./media/pictures/projects/origami-home.png",
   info: (
@@ -47,7 +47,8 @@ const origami = {
       It was built with <b>React</b>, and it's centered around the{" "}
       <b>art of origami</b>.
       <br />
-      It's quite simple and barebones, but by all means go ahead and chek it out{" "}
+      It's quite simple and barebones, but by all means go ahead and check it
+      out{" "}
       <a
         className="link"
         href="https://intro-to-multimedia.netlify.app/"
@@ -96,30 +97,26 @@ const ProjectsPage = () => {
     <main>
       {projectList.map((project) => {
         return (
-          <section className="project">
-            <aside>
-              <div className="text-box sectioned">
-                <FontAwesomeIcon
-                  icon={icons[project.type]}
-                  className="icon fixed"
-                />
-                <b>
-                  <h2 className="p-title">{project.name}</h2>
-                </b>
-              </div>
+          <section key={project.name} className="project">
+            <div className="text-box sectioned title-box">
+              <FontAwesomeIcon
+                icon={icons[project.type]}
+                className="icon fixed"
+              />
+              <b>
+                <h2 className="p-title">{project.name}</h2>
+              </b>
+            </div>
 
-              <figure>
-                <img
-                  className="p-image"
-                  src={project.picture}
-                  alt={project.name + " preview"}
-                ></img>
-              </figure>
-            </aside>
+            <figure>
+              <img
+                className="p-image"
+                src={project.picture}
+                alt={project.name + " preview"}
+              ></img>
+            </figure>
 
-            <article>
-              <div className="text-box p-info">{project.info}</div>
-            </article>
+            <article className="text-box p-info">{project.info}</article>
           </section>
         );
       })}

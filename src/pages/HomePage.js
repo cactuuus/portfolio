@@ -34,16 +34,13 @@ const HomePage = () => {
             all the links you need are up top!
           </p>
         </article>
-        <article className="text-box sectioned">
+        <button className="text-box sectioned">
           <FontAwesomeIcon className="icon grow red" icon={faHeart} />
           <p>
-            Lastly,{" "}
-            <b>
-              click <span className="link">here</span> to leave a heart
-            </b>
-            . It does nothing, but it’s free, so why not?
+            Lastly, <b>click to leave a heart</b>. It does nothing, but it’s
+            free, so why not?
           </p>
-        </article>
+        </button>
       </section>
     </main>
   );
