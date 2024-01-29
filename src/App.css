@@ -207,9 +207,10 @@ header {
 
 .dropdown-content {
   position: absolute;
+  opacity: 0.95;
   overflow: hidden;
   transform-origin: top right;
-  min-width: 250px;
+  min-width: 230px;
   right: calc(-1 * var(--small-gap));
   margin-top: var(--small-gap);
   padding-bottom: 0;
@@ -221,7 +222,7 @@ header {
   li {
     list-style: none;
     margin: var(--small-gap) 0;
-    padding-left: var(--small-gap);
+    padding: 0 var(--small-gap);
     height: var(--medium-gap);
 
     .link {
