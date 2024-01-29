@@ -1,21 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-import CoffeePage from "./pages/CoffeePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import Header from "./components/Header";
 import "./App.css";
 
 function App() {
   // info about pages in the website
-  const home = { name: "about", path: "/", element: <HomePage /> };
-  const coffee = { name: "coffee", path: "/coffee", element: <CoffeePage /> };
+  const home = { name: "about_me", path: "/", element: <HomePage /> };
+  //   const coffee = { name: "coffee", path: "/coffee", element: <CoffeePage /> };
   const projects = {
     name: "projects",
     path: "/projects",
     element: <ProjectsPage />,
   };
-  const routes = [home, coffee, projects];
+  const routes = [home, projects];
 
   return (
     <BrowserRouter>
