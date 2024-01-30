@@ -65,7 +65,7 @@ body {
     radial-gradient(var(--bg-secondary) 0.5px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
   background-attachment: fixed;
-  animation: background-animation 0.5s linear infinite;
+  animation: background-animation 1s linear infinite;
 }
 
 @keyframes background-animation {
@@ -183,7 +183,7 @@ b {
 
 #banner {
   font-size: 2.5rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: -0.1rem;
   text-transform: uppercase;
 }
 
@@ -201,10 +201,6 @@ b {
 .icon {
   height: 2rem;
   vertical-align: bottom;
-
-  &.small {
-    width: 1.5rem;
-  }
 }
 
 header {
@@ -215,42 +211,10 @@ header {
 
   position: sticky;
   top: var(--small-gap);
+  opacity: 0.95;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.dropdown-menu {
-  position: relative;
-}
-
-.dropdown-content {
-  position: absolute;
-  opacity: 0.95;
-  overflow: hidden;
-  transform-origin: top right;
-  min-width: 230px;
-  right: calc(-1 * var(--small-gap));
-  margin-top: var(--small-gap);
-  padding-bottom: 0;
-
-  .section-title {
-    text-transform: uppercase;
-  }
-
-  li {
-    list-style: none;
-    margin: var(--small-gap) 0;
-    padding: 0 var(--small-gap);
-    height: var(--medium-gap);
-
-    .link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-    }
-  }
+  align-items: baseline;
 }
 
 .dropdown-menu[data-open="false"] {
@@ -265,7 +229,51 @@ header {
   }
 }
 
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  opacity: 0.95;
+  transform-origin: top right;
+  min-width: 200px;
+  right: calc(-1 * var(--small-gap));
+  margin-top: var(--small-gap);
+  padding-bottom: 0;
+
+  .section-title {
+    text-transform: uppercase;
+  }
+
+  li {
+    list-style: none;
+    margin: var(--tiny-gap) 0;
+    padding: 0 var(--small-gap);
+    height: var(--medium-gap);
+
+    .link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.3rem 0;
+  flex-grow: 0.8;
+  max-width: 400px;
+}
+
 @media screen and (min-width: 700px) {
+  #banner {
+    letter-spacing: 0.1rem;
+  }
+
   header {
     margin: var(--medium-gap) 0 var(--large-gap);
     padding-top: var(--tiny-gap);
@@ -274,12 +282,7 @@ header {
   }
 
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.3rem 0;
-    flex-grow: 0.6;
-    max-width: 350px;
+    flex-grow: 0.5;
   }
 
   ul#social-links > li {
