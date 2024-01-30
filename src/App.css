@@ -265,7 +265,8 @@ nav {
   justify-content: space-between;
   align-items: baseline;
   padding: 0.3rem 0;
-  flex-grow: 0.7;
+  flex-grow: 0.8;
+  max-width: 400px;
 }
 
 @media screen and (min-width: 700px) {
@@ -282,7 +283,6 @@ nav {
 
   nav {
     flex-grow: 0.5;
-    max-width: 350px;
   }
 
   ul#social-links > li {
