@@ -10,7 +10,7 @@ const Header = ({ pages }) => {
     <header className="highlight">
       <Link to={"/"}>
         <h1 id="banner" className="link">
-          {isMobile ? "J.C." : "Jacopo Calvi"}
+          {isMobile ? "J/C" : "Jacopo Calvi"}
         </h1>
       </Link>
       <nav>
