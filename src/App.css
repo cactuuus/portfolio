@@ -45,6 +45,10 @@ body {
   --small-gap: 1rem;
   --medium-gap: 2rem;
   --large-gap: 4rem;
+
+  /* background dot spacing */
+  --dot-spacing: 15px;
+  --half-dot-spacing: calc(var(--dot-spacing) / 2);
 }
 
 /******************************************************************************
@@ -52,13 +56,26 @@ body {
 ******************************************************************************/
 
 body {
+  width: 96%;
+  margin: auto !important;
+
+  /* background */
   background-color: var(--bg-primary);
   background-image: radial-gradient(var(--bg-secondary) 0.5px, transparent 0),
     radial-gradient(var(--bg-secondary) 0.5px, transparent 0);
-  background-size: 9px 9px;
-  background-position: 0 0, 4.5px 4.5px;
-  width: 96%;
-  margin: auto !important;
+  background-size: var(--dot-spacing) var(--dot-spacing);
+  background-attachment: fixed;
+  animation: background-animation 0.5s linear infinite;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: 0 0, var(--half-dot-spacing) var(--half-dot-spacing);
+  }
+  100% {
+    background-position: var(--half-dot-spacing) var(--half-dot-spacing),
+      var(--dot-spacing) var(--dot-spacing);
+  }
 }
 
 * {
@@ -196,6 +213,8 @@ header {
   padding: 0 var(--small-gap);
   box-shadow: var(--shadow);
 
+  position: sticky;
+  top: var(--small-gap);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,6 +269,7 @@ header {
   header {
     margin: var(--medium-gap) 0 var(--large-gap);
     padding-top: var(--tiny-gap);
+    top: var(--medium-gap);
     align-items: baseline;
   }
 
