@@ -65,7 +65,7 @@ body {
     radial-gradient(var(--bg-secondary) 0.5px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
   background-attachment: fixed;
-  animation: background-animation 1s linear infinite;
+  animation: background-animation 02s linear infinite;
 }
 
 @keyframes background-animation {
@@ -168,7 +168,7 @@ b {
         color: red;
       }
       &.grow {
-        font-size: clamp(2rem, 5vw, 3rem);
+        height: clamp(2rem, 5vw, 3rem);
       }
       &.fixed {
         font-size: 1.5rem;
@@ -210,7 +210,8 @@ header {
   box-shadow: var(--shadow);
 
   position: sticky;
-  top: var(--small-gap);
+  top: 0;
+  z-index: 5;
   opacity: 0.95;
   display: flex;
   justify-content: space-between;
@@ -277,7 +278,6 @@ nav {
   header {
     margin: var(--medium-gap) 0 var(--large-gap);
     padding-top: var(--tiny-gap);
-    top: var(--medium-gap);
     align-items: baseline;
   }
 
@@ -376,4 +376,13 @@ nav {
       grid-column: 2;
     }
   }
+}
+
+/******************************************************************************
+    404 PAGE NOT FOUND
+******************************************************************************/
+
+#not-found-msg {
+  width: fit-content;
+  margin: auto;
 }

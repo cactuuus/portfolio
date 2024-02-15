@@ -1,10 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faCode,
-  faMessage,
-  faHeart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faCode, faMessage } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = () => {
   return (
@@ -32,13 +27,6 @@ const HomePage = () => {
           <p>
             You can get in touch through my <b>LinkedIn</b> or <b>Instagram</b>,
             all the links you need are up top!
-          </p>
-        </article>
-        <article className="text-box sectioned">
-          <FontAwesomeIcon className="icon grow red" icon={faHeart} />
-          <p>
-            Lastly, <b>click to leave a heart</b>. It does nothing, but it’s
-            free, so why not?
           </p>
         </article>
       </section>
