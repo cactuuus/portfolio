@@ -12,7 +12,7 @@ const Header = ({ pages }) => {
     <header className="highlight">
       <Link to={"/"}>
         <h1 id="banner" className="link">
-          {isMobile ? "J/C" : "Jacopo Calvi"}
+          {isMobile ? "JC" : "Jacopo Calvi"}
         </h1>
       </Link>
       <nav>
@@ -25,7 +25,7 @@ const Header = ({ pages }) => {
             </>
           );
         })}
-        <a href="./resume.pdf" rel="noreferrer" target="_blank">
+        <a href="./resume.pdf" rel="noreferrer" target="_blank" download>
           resume
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
