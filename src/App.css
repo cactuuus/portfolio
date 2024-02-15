@@ -210,6 +210,7 @@ header {
   box-shadow: var(--shadow);
 
   position: sticky;
+  top: 0;
   z-index: 5;
   opacity: 0.95;
   display: flex;
@@ -277,7 +278,6 @@ nav {
   header {
     margin: var(--medium-gap) 0 var(--large-gap);
     padding-top: var(--tiny-gap);
-    top: var(--medium-gap);
     align-items: baseline;
   }
 
@@ -379,22 +379,10 @@ nav {
 }
 
 /******************************************************************************
-    RESUME PAGE
+    404 PAGE NOT FOUND
 ******************************************************************************/
 
-#resume-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  #resume {
-    margin-top: var(--small-gap);
-    box-shadow: var(--shadow);
-    z-index: 0;
-    border: var(--border);
-  }
-
-  .new-tab-btn {
-    width: 200px;
-  }
+#not-found-msg {
+  width: fit-content;
+  margin: auto;
 }
