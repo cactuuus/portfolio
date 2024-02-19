@@ -25,7 +25,7 @@ const Header = ({ pages }) => {
             </>
           );
         })}
-        <a href="./resume.pdf" rel="noreferrer" target="_blank" download>
+        <a href="./resume.pdf" rel="noreferrer" target="_blank">
           resume
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}

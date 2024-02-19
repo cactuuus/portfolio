@@ -7,11 +7,6 @@ import Header from "./components/Header";
 import "./App.css";
 
 function App() {
-  const faviconTag = document.getElementById("favicon");
-  const isDark = window.matchMedia("(prefers-color-scheme: dark)");
-  if (isDark.matches) faviconTag.href = "./faviconDark.ico";
-  else faviconTag.href = "./favicon.ico";
-
   // info about pages in the website
   const home = { name: "about", path: "/", element: <HomePage /> };
   const projects = {

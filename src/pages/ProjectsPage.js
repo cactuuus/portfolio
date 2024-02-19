@@ -6,6 +6,27 @@ const icons = {
   web: faCode,
 };
 
+const SnakesOnA2DPlane = {
+  name: "Snakes On A (2D) Plane",
+  type: "game",
+  picture: "./media/pictures/projects/snakes-on-a-2D-plane.png",
+  info: (
+    <p>
+      A remake of the popular <b>Nokia</b>'s' classic, running directy on{" "}
+      <b>Microsoft Excel</b>.
+      <br />
+      <br />
+      This cute little project was developed for the{" "}
+      <b>HackSussex’s Hackathon (2024)</b>, to chowcase the power and
+      felxibility of <b>Excel</b>.
+      <br />
+      <br />
+      While it didn't win me anything, it was a lot of fun to develop, and it
+      forced me to learn the basics of <b>VBA</b>.
+    </p>
+  ),
+};
+
 const ricksRanch = {
   name: "Rick's Ranch",
   type: "game",
@@ -16,7 +37,7 @@ const ricksRanch = {
       <br />
       <br />
       Initially developed in <b>Unity</b> and <b>C#</b> for{" "}
-      <b>HackSussex’s GameJam</b>, where it won in two categories:{" "}
+      <b>HackSussex’s GameJam (2023)</b>, where it won in two categories:{" "}
       <em>“most unconventional controls”</em> & <em>“best overall”</em>.<br /> I
       then re-wrote the entire project using <b>Godot</b>, because why not?{" "}
       <br />
@@ -90,7 +111,7 @@ const JCPhotograpy = {
   ),
 };
 
-const projectList = [ricksRanch, origami, JCPhotograpy];
+const projectList = [SnakesOnA2DPlane, ricksRanch, origami, JCPhotograpy];
 
 const ProjectsPage = () => {
   return (
