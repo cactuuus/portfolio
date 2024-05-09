@@ -1,12 +1,48 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGamepad, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faGamepad, faCode, faGear } from "@fortawesome/free-solid-svg-icons";
 
 const icons = {
   game: faGamepad,
   web: faCode,
+  other: faGear,
 };
 
-const SnakesOnA2DPlane = {
+const preciousBottles = {
+  name: "Precious Bottles",
+  type: "other",
+  picture: "./media/pictures/projects/precious-bottles.jpg",
+  info: (
+    <p>
+      A project following the footsteps of{" "}
+      <a
+        className="link"
+        href="https://www.preciousplastic.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Precious Plastic
+      </a>
+      , which aims at recycling plastic bottles into filament suitable for 3D
+      printing, and does so by using open source tachnology (such as the{" "}
+      <a
+        className="link"
+        href="http://recreator3d.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Recreator 3D
+      </a>
+      ).
+      <br />
+      <br />
+      So far we managed to succesfully print a few components, but we're still
+      in early stages. It's a very challenging project, and I am very much
+      learning as I go!
+    </p>
+  ),
+};
+
+const snakesOnA2DPlane = {
   name: "Snakes On A (2D) Plane",
   type: "game",
   picture: "./media/pictures/projects/snakes-on-a-2D-plane.png",
@@ -111,7 +147,13 @@ const JCPhotograpy = {
   ),
 };
 
-const projectList = [SnakesOnA2DPlane, ricksRanch, origami, JCPhotograpy];
+const projectList = [
+  preciousBottles,
+  snakesOnA2DPlane,
+  ricksRanch,
+  origami,
+  JCPhotograpy,
+];
 
 const ProjectsPage = () => {
   return (

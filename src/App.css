@@ -133,7 +133,7 @@ button {
   } */
 }
 
-.p-info .link,
+article .link,
 b {
   font-weight: bold;
   color: var(--font-color);
