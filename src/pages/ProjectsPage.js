@@ -10,7 +10,7 @@ const icons = {
 const preciousBottles = {
   name: "Precious Bottles",
   type: "other",
-  picture: "./media/pictures/projects/precious-bottles.jpg",
+  picture: "./media/pictures/projects/precious-bottles.webp",
   info: (
     <p>
       A project following the footsteps of{" "}
@@ -45,20 +45,29 @@ const preciousBottles = {
 const snakesOnA2DPlane = {
   name: "Snakes On A (2D) Plane",
   type: "game",
-  picture: "./media/pictures/projects/snakes-on-a-2D-plane.png",
+  picture: "./media/pictures/projects/snakes-on-a-2D-plane.webp",
   info: (
     <p>
-      A remake of the popular <b>Nokia</b>'s' classic, running directy on{" "}
-      <b>Microsoft Excel</b>.
-      <br />
-      <br />
-      This cute little project was developed for the{" "}
-      <b>HackSussex’s Hackathon (2024)</b>, to chowcase the power and
-      felxibility of <b>Excel</b>.
+      A remake of the popular <b>Nokia</b>'s' classic, running in{" "}
+      <b>Microsoft Excel</b>, developed during the{" "}
+      <b>HackSussex’s Hackathon 2024</b>.
       <br />
       <br />
       While it didn't win me anything, it was a lot of fun to develop, and it
       forced me to learn the basics of <b>VBA</b>.
+      <br />
+      <br />
+      You can download it{" "}
+      <a
+        className="link"
+        href="./Snakes-on-a-2D-plane.xlsm"
+        target="_blank"
+        rel="noreferrer"
+      >
+        here
+      </a>
+      , but beware you need to enable macros in order to play it. <br />
+      The question is, do you trust me?
     </p>
   ),
 };
@@ -66,7 +75,7 @@ const snakesOnA2DPlane = {
 const ricksRanch = {
   name: "Rick's Ranch",
   type: "game",
-  picture: "./media/pictures/projects/ricks-ranch.png",
+  picture: "./media/pictures/projects/ricks-ranch.webp",
   info: (
     <p>
       A fun and short retro shooter, with unpredictable controls.
@@ -95,7 +104,7 @@ const ricksRanch = {
 const origami = {
   name: "Origami",
   type: "web",
-  picture: "./media/pictures/projects/origami-home.png",
+  picture: "./media/pictures/projects/origami-home.webp",
   info: (
     <p>
       A website made for my first year's <em>"Intro to Multimedia"</em> module.
@@ -122,7 +131,7 @@ const origami = {
 const JCPhotograpy = {
   name: "JC|Photography",
   type: "web",
-  picture: "./media/pictures/projects/JCPhotography-gallery.png",
+  picture: "./media/pictures/projects/JCPhotography-gallery.webp",
   info: (
     <p>
       Another website I did for my foundation year.
@@ -174,6 +183,7 @@ const ProjectsPage = () => {
             <figure>
               <img
                 className="p-image"
+                loading="lazy"
                 src={project.picture}
                 alt={project.name + " preview"}
               ></img>
