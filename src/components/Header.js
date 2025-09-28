@@ -25,7 +25,11 @@ const Header = ({ pages }) => {
             </>
           );
         })}
-        <a href="./resume.pdf" rel="noreferrer" target="_blank">
+        <a
+          href="https://drive.google.com/file/d/1R2qAeukGjLD6dm86wgNkBkpaODI0PAaN/view?usp=drive_link"
+          rel="noreferrer"
+          target="_blank"
+        >
           resume
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
