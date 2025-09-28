@@ -132,60 +132,60 @@ const ricksRanch = {
   ),
 };
 
-const origami = {
-  name: "Origami",
-  type: "web",
-  picture: "./media/pictures/projects/origami-home.webp",
-  info: (
-    <p>
-      A website made for my first year's <em>"Intro to Multimedia"</em> module.
-      <br />
-      <br />
-      It was built with <b>React</b>, and it's centered around the{" "}
-      <b>art of origami</b>.
-      <br />
-      It's quite simple and barebones, but by all means go ahead and check it
-      out{" "}
-      <a
-        className="link"
-        href="https://intro-to-multimedia.netlify.app/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        here
-      </a>
-      .
-    </p>
-  ),
-};
+// const origami = {
+//   name: "Origami",
+//   type: "web",
+//   picture: "./media/pictures/projects/origami-home.webp",
+//   info: (
+//     <p>
+//       A website made for my first year's <em>"Intro to Multimedia"</em> module.
+//       <br />
+//       <br />
+//       It was built with <b>React</b>, and it's centered around the{" "}
+//       <b>art of origami</b>.
+//       <br />
+//       It's quite simple and barebones, but by all means go ahead and check it
+//       out{" "}
+//       <a
+//         className="link"
+//         href="https://intro-to-multimedia.netlify.app/"
+//         target="_blank"
+//         rel="noreferrer"
+//       >
+//         here
+//       </a>
+//       .
+//     </p>
+//   ),
+// };
 
-const JCPhotograpy = {
-  name: "JC|Photography",
-  type: "web",
-  picture: "./media/pictures/projects/JCPhotography-gallery.webp",
-  info: (
-    <p>
-      Another website I did for my foundation year.
-      <br />
-      <br />
-      This one is a mock photography website, and it is a bit more complicated:
-      it uses <b>Django</b> and features a <b>database</b> to store user's login
-      information and appointment details.
-      <br />
-      <br />
-      It might or might not still be up on <b>PythonAnywhere</b>. Here's a{" "}
-      <a
-        className="link"
-        href="https://cactuuus.pythonanywhere.com/index"
-        target="_blank"
-        rel="noreferrer"
-      >
-        link
-      </a>{" "}
-      to it, test you luck.
-    </p>
-  ),
-};
+// const JCPhotograpy = {
+//   name: "JC|Photography",
+//   type: "web",
+//   picture: "./media/pictures/projects/JCPhotography-gallery.webp",
+//   info: (
+//     <p>
+//       Another website I did for my foundation year.
+//       <br />
+//       <br />
+//       This one is a mock photography website, and it is a bit more complicated:
+//       it uses <b>Django</b> and features a <b>database</b> to store user's login
+//       information and appointment details.
+//       <br />
+//       <br />
+//       It might or might not still be up on <b>PythonAnywhere</b>. Here's a{" "}
+//       <a
+//         className="link"
+//         href="https://cactuuus.pythonanywhere.com/index"
+//         target="_blank"
+//         rel="noreferrer"
+//       >
+//         link
+//       </a>{" "}
+//       to it, test you luck.
+//     </p>
+//   ),
+// };
 
 const projectList = [
     miseEnPlace,
