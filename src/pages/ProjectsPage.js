@@ -7,9 +7,38 @@ const icons = {
   other: faGear,
 };
 
+const miseEnPlace = {
+    name: "Mise En Place",
+    type: "web",
+    year: 2025,
+    picture: "./media/pictures/projects/mise.webp",
+    info: (
+        <p>
+            It's the year 2025, I love cooking, and I am tired of my scattered collection of bookmarked recipes.
+            <br/>
+            <br/>
+            <a
+                className="link"
+                href="https://mise.jacopocalvi.com/"
+                target="_blank"
+                rel="noreferrer"
+            >
+                Mise En Place
+            </a> is a web app I built using <b>Laravel</b> & <b>Vue</b> to solve this issue. With it, you can create
+            or import recipes from your favourite sites (<b>with attribution of course!</b>). All of the recipes you
+            care about in one place, in one format, customisable as you please.
+            <br/>
+            <br/>
+            It is still in active development, and likely will always be.
+            Oh, it is also public and <b>free</b> to use, feel free to give it a spin!
+        </p>
+    )
+}
+
 const preciousBottles = {
   name: "Precious Bottles",
   type: "other",
+  year: 2024,
   picture: "./media/pictures/projects/precious-bottles.webp",
   info: (
     <p>
@@ -23,7 +52,7 @@ const preciousBottles = {
         Precious Plastic
       </a>
       , which aims at recycling plastic bottles into filament suitable for 3D
-      printing, and does so by using open source tachnology (such as the{" "}
+      printing, and does so by using open source technology (such as the{" "}
       <a
         className="link"
         href="http://recreator3d.com/"
@@ -35,7 +64,7 @@ const preciousBottles = {
       ).
       <br />
       <br />
-      So far we managed to succesfully print a few components, but we're still
+      So far we managed to successfully print a few components, but we're still
       in early stages. It's a very challenging project, and I am very much
       learning as I go!
     </p>
@@ -45,6 +74,7 @@ const preciousBottles = {
 const snakesOnA2DPlane = {
   name: "Snakes On A (2D) Plane",
   type: "game",
+  year: 2024,
   picture: "./media/pictures/projects/snakes-on-a-2D-plane.webp",
   info: (
     <p>
@@ -75,6 +105,7 @@ const snakesOnA2DPlane = {
 const ricksRanch = {
   name: "Rick's Ranch",
   type: "game",
+  year: 2023,
   picture: "./media/pictures/projects/ricks-ranch.webp",
   info: (
     <p>
@@ -157,11 +188,10 @@ const JCPhotograpy = {
 };
 
 const projectList = [
+    miseEnPlace,
   preciousBottles,
   snakesOnA2DPlane,
   ricksRanch,
-  origami,
-  JCPhotograpy,
 ];
 
 const ProjectsPage = () => {
