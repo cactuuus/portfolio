@@ -61,11 +61,11 @@ body {
 
   /* background */
   background-color: var(--bg-primary);
-  background-image: radial-gradient(var(--bg-secondary) 0.5px, transparent 0),
-    radial-gradient(var(--bg-secondary) 0.5px, transparent 0);
+  background-image: radial-gradient(var(--bg-secondary) 1px, transparent 0),
+    radial-gradient(var(--bg-secondary) 1px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
   background-attachment: fixed;
-  animation: background-animation 02s linear infinite;
+  animation: background-animation 0.5s linear infinite;
 }
 
 @keyframes background-animation {
