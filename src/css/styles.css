@@ -118,6 +118,7 @@ img {
   border: var(--border);
   box-shadow: var(--shadow);
   vertical-align: bottom;
+  background-color: var(--bg-primary);
 }
 
 button {
@@ -201,7 +202,7 @@ b, .strong {
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   vertical-align: bottom;
 }
 
@@ -278,7 +279,7 @@ nav {
   }
 
   header {
-    margin: var(--medium-gap) 0 var(--large-gap);
+    margin: var(--medium-gap) 0;
     padding-top: var(--tiny-gap);
     align-items: baseline;
   }
@@ -289,7 +290,7 @@ nav {
 
   ul#social-links > li {
     display: inline;
-    margin-left: 0.2rem;
+    margin-left: 0.4rem;
   }
 }
 
@@ -299,9 +300,11 @@ nav {
 
 #portrait {
   display: block;
-  flex-shrink: 0;
   max-width: 300px;
+  width: 100%;
   margin: 0 auto var(--small-gap);
+  aspect-ratio: 4 / 5;
+  object-fit: fill;
 }
 
 #info {
@@ -331,7 +334,7 @@ nav {
 ******************************************************************************/
 
 .project {
-  margin-bottom: var(--large-gap);
+  margin-bottom: var(--medium-gap);
 
   .p-title {
     font-size: 1.4rem;
