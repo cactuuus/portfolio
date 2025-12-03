@@ -1,0 +1,26 @@
+---
+layout: base.html
+title: Projects - Jacopo Calvi
+---
+
+<main>
+    {%- for project in collections.project %}
+        <section class="project">
+        <div class="text-box sectioned title-box strong">
+            <i class="fa-solid {{ project.data.icon }} icon fixed "></i>
+            <h2 class="p-title">{{ project.data.title }}</h2>
+        </div>
+
+        <figure>
+            <img
+            class="p-image"
+            loading="lazy"
+            src={{ project.data.picture_src }}
+            alt="{{ project.data.title }} preview"
+            ></img>
+        </figure>
+
+        <article class="text-box p-info">{{ project.data.info }}</article>
+        </section>
+    {%- endfor %}
+</main>
