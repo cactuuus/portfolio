@@ -10,6 +10,16 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/*.xlsm");
 
+  // sorted projects
+  eleventyConfig.addCollection("projectsSorted", function(collectionApi) {
+    return collectionApi.getFilteredByTag("project").sort((a, b) => {
+    // Sort by the order field
+    let orderA = a.data.order;
+    let orderB = b.data.order;
+    return orderB - orderA;
+    });
+  });
+
   return {
     dir: {
       input: "src",
