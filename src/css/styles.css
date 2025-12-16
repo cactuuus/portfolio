@@ -339,6 +339,16 @@ nav {
     text-transform: uppercase;
   }
 
+  .title-box {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .icon {
+      font-size: 1rem;
+    }
+  }
+
   .p-image {
     width: 100%;
     margin: var(--tiny-gap) 0;
