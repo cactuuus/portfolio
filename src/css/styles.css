@@ -32,8 +32,6 @@
 }
 
 body {
-  font-family: "Cascadia Code", monospace;
-
   /* screen sizes reference */
   --extra-small-screen: 550px;
   --small-screen: 800px;
@@ -82,7 +80,7 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family: "Cascadia Code", sans-serif;
+  font-family: "Ubuntu Mono", "Cascadia Code", monospace;
   text-decoration: none;
   font-weight: normal;
   font-size: 1rem;
